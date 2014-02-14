@@ -39,11 +39,11 @@ var checkForWinner = function () {
   {
     console.log('somebody won');
     // TODO: Trigger 'game-win' event with the winning player as the event data
-
+    $(document).trigger('game-win', currentPlayer);
   }
 };
 
-$(document).Trigger('click', '#board .space', function (e) {
+$(document).on('click', '#board .space', function (e) {
   var spaceNum = $(e.currentTarget).index();
   console.log('You clicked on space #' + spaceNum);
 
@@ -59,7 +59,7 @@ $(document).Trigger('click', '#board .space', function (e) {
 
 $(document).on('game-win', function (e, winner) {
   // TODO: Alert who won the game
-  Alert
+  alert("You Won!");
 });
 
 // Start the game
