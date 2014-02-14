@@ -46,15 +46,21 @@ var checkForWinner = function () {
 $(document).on('click', '#board .space', function (e) {
   var spaceNum = $(e.currentTarget).index();
   console.log('You clicked on space #' + spaceNum);
+    if (spaces[spaceNum]){
 
-  // Marks the space with the current player's name
-  // TODO: Don't mark it unless the space is blank
-  spaces[spaceNum] = currentPlayer;
+    }else {
+      spaces[spaceNum] = currentPlayer;
   // Adds a class to elem so css can take care of the visuals
   $('#board .space:eq(' + spaceNum + ')').addClass(currentPlayer);
 
   checkForWinner();
   setNextTurn();
+
+    }
+
+  // Marks the space with the current player's name
+  // TODO: Don't mark it unless the space is blank
+
 });
 
 $(document).on('game-win', function (e, winner) {
