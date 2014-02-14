@@ -56,17 +56,26 @@ $(document).on('click', '#board .space', function (e) {
   checkForWinner();
   setNextTurn();
 
-    }
+  }
 
   // Marks the space with the current player's name
   // TODO: Don't mark it unless the space is blank
+
 
 });
 
 $(document).on('game-win', function (e, winner) {
   // TODO: Alert who won the game
   alert("You Won!");
+
 });
 
 // Start the game
 setNextTurn();
+
+// $(document).on('click', function (e, winner){
+//   if ('game-won' === true)
+
+// }
+
+
